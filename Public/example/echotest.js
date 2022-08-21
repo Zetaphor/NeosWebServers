@@ -6,8 +6,10 @@
  * Copyright (c) 2012 Kaazing Corporation.
  */
 
-var url = "ws://127.0.0.1:4649/Echo";
-//var url = "wss://localhost:5963/Echo";
+// var url = "ws://localhost:8080/echo";
+// var url = "ws://localhost:8080/chat";
+// var url = "ws://localhost:8080/chat-echo";
+var url = "ws://localhost:8080/chat-id";
 var output;
 
 function init () {
@@ -37,12 +39,12 @@ function doWebSocket () {
 
 function onOpen (event) {
   writeToScreen ("CONNECTED");
-  send ("WebSocket rocks");
+  send ("I'm here");  
 }
 
 function onMessage (event) {
   writeToScreen ('<span style="color: blue;">RESPONSE: ' + event.data + '</span>');
-  websocket.close ();
+  // websocket.close ();
 }
 
 function onError (event) {
@@ -66,3 +68,4 @@ function writeToScreen (message) {
 }
 
 window.addEventListener ("load", init, false);
+
