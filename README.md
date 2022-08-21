@@ -49,8 +49,10 @@ Each message is prefixed with the connection ID separated by a pipe operator ( |
 
 Example:
 
+```
 3CqoZKBIWUyjmSITygRFZw|connected (Received on connection and broadcast to all other clients)
 3CqoZKBIWUyjmSITygRFZw|Some example data (Received in reply to sending data and broadcast to all other clients)
 o5MkHrV34k+5LfY6Q4zHag|I saw your data! (Received in reply to sending data and broadcast to all other clients)
+```
 
 This endpoint can be accessed by connecting your websocket client to `ws://localhost:8080/chat-id`
