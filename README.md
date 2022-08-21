@@ -34,8 +34,6 @@ This endpoint can be accessed by connecting your websocket client to `ws://local
 
 This endpoint is intended to act as a shared messaging bus. Any message sent to it will broadcast to all other connected clients. The sender does not receive a copy of the sent message.
 
-Additionally all clients will receive a `connected` and `disconnected` message whenever a client opens or closes a connection. The `connected` message is sent to the connecting client as well.
-
 This endpoint can be accessed by connecting your websocket client to `ws://localhost:8080/chat`
 
 ### Chat Echo Server
