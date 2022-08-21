@@ -22,7 +22,7 @@ The server can be accessed by navigating to http://localhost:8080/
 
 ## Websocket Server
 
-There are three websocket endpoints, each behaving slightly differently to enable a wide range of applications.
+There are four websocket endpoints, each behaving slightly differently to enable a wide range of applications.
 
 ### Echo Server
 
@@ -37,6 +37,12 @@ This endpoint is intended to act as a shared messaging bus. Any message sent to 
 Additionally all clients will receive a `connected` and `disconnected` message whenever a client opens or closes a connection. The `connected` message is sent to the connecting client as well.
 
 This endpoint can be accessed by connecting your websocket client to `ws://localhost:8080/chat`
+
+### Chat Echo Server
+
+This endpoint is identical to the Chat Server endpoint, except it sends the input back to the receiver in addition to broadcasting to all connected clients.
+
+This endpoint can be accessed by connecting your websocket client to `ws://localhost:8080/chat-echo`
 
 ### Chat ID Server
 
