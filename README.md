@@ -4,7 +4,7 @@ A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https
 
 This mod implements an HTTP web server and a Websockets server into the Neos client. This can be used to serve local copy of web apps rather than relying on a third party host and removes the need for a hosted websocket server.
 This mod is largely targeted at developers who are interested in ensuring the backends for their web-enabled objects in-world can stand the test of time. Eventually domains go offline and free web hosts go down.
-The web server serves content from a `Webserver` folder in the NeosVR installation root. There are also three websocket endpoints to enable a variety of different application needs.
+The web server serves content from a `Webserver` folder in the NeosVR installation root. This folder will need to be created manually. There are also four websocket endpoints to enable a variety of different application needs.
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
