@@ -133,9 +133,8 @@ namespace WebsocketServer
                 byte[] rxBuffer,
                 IWebSocketReceiveResult rxResult)
                     => Task.WhenAll(
-                    SendAsync(context, context.Id + "|" + Encoding.GetString(rxBuffer)), 
+                    SendAsync(context, context.Id + "|" + Encoding.GetString(rxBuffer)),
                     BroadcastAsync(context.Id + "|" + Encoding.GetString(rxBuffer), c => c != context));
         }
     }
 }
-

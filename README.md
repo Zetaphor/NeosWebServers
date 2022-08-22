@@ -1,6 +1,6 @@
 # Neos Web Servers
 
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) 
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/)
 
 This mod implements an HTTP web server and a Websockets server into the Neos client. This can be used to serve local copy of web apps rather than relying on a third party host and removes the need for a hosted websocket server.
 This mod is largely targeted at developers who are interested in ensuring the backends for their web-enabled objects in-world can stand the test of time. Eventually domains go offline and free web hosts go down.
@@ -14,7 +14,7 @@ The web server serves content from a `Webserver` folder in the NeosVR installati
 
 ## Web Server
 
-When the Neos client is started the web server will begin hosting any content in the `Webserver` folder in the NeosVR root folder. 
+When the Neos client is started the web server will begin hosting any content in the `Webserver` folder in the NeosVR root folder.
 
 This folder should be at `C:\Program Files (x86)\Steam\steamapps\common\NeosVR\Webserver` for a default install. You will need to create the folder and add any content you want served.
 
@@ -50,7 +50,7 @@ This allows you to distinguish between different connected clients to enable mor
 
 All clients will receive a `connected` and `disconnected` message whenever a client opens or closes a connection. The `connected` message is sent to the connecting client as well.
 
-Each message is prefixed with the connection ID separated by a pipe operator ( | ) for easy parsing. 
+Each message is prefixed with the connection ID separated by a pipe operator ( | ) for easy parsing.
 
 Example:
 

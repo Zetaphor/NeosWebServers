@@ -23,7 +23,7 @@ function init () {
 
   websocket.onclose = function (e) {
     onClose (e);
-  };  
+  };
 }
 
 function onOpen (event) {
@@ -64,7 +64,7 @@ recognition.addEventListener('result', e => {
     document.getElementById("ttsOutput").innerHTML = transcript;
     websocket.send(transcript);
 });
-  
+
 if (speech == true) {
     recognition.start();
     recognition.addEventListener('end', recognition.start);
