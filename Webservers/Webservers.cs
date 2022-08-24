@@ -6,6 +6,7 @@ using EmbedIO.Actions;
 using EmbedIO.WebSockets;
 using System.Threading.Tasks;
 using EmbedIO.Files;
+using System.IO;
 
 namespace WebsocketServer
 {
@@ -36,7 +37,7 @@ namespace WebsocketServer
         private void startWebServer()
         {
             var url = "http://localhost:8080/";
-            var cwd = System.IO.Directory.GetCurrentDirectory();
+            var cwd = Directory.GetCurrentDirectory();
             Msg(cwd);
 
             var server = new WebServer(o => o
@@ -48,7 +49,7 @@ namespace WebsocketServer
                 .WithModule(new WebSocketsChatServer("/chat"))
                 .WithModule(new WebSocketsChatEchoServer("/chat-echo"))
                 .WithModule(new WebSocketsChatIdServer("/chat-id"))
-                .WithStaticFolder("/", cwd + "\\Webserver", true, m => m
+                .WithStaticFolder("/", Path.Combine(cwd, "Webserver"), true, m => m
                     .WithContentCaching(false)) // Add static files after other modules to avoid conflicts
                 .WithModule(new ActionModule("/", HttpVerbs.Any, ctx => ctx.SendDataAsync(new { Message = "Error" })));
 
