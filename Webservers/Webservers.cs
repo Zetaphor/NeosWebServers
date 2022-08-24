@@ -21,7 +21,7 @@ namespace WebsocketServer
 
         public override string Name => "WebServers";
         public override string Author => "Zetaphor";
-        public override string Version => "1.0.0";
+        public override string Version => "1.1.0";
         public override string Link => "https://github.com/Zetaphor/NeosWebServers/";
 
         // Need to copy in EmbedIO an SwanLite manually with build
